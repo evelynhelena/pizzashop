@@ -96,9 +96,11 @@ export function SignUp() {
 
             <p className="px-6 text-center text-sm leading-relaxed text-muted-foreground">
               Ao continuar, você concorda com nossos{' '}
-              <a className="underline underline-offset-4">termos de serviço</a>{' '}
+              <a className="cursor-pointer underline underline-offset-4">
+                termos de serviço
+              </a>{' '}
               e{' '}
-              <a className="underline underline-offset-4">
+              <a className="cursor-pointer underline underline-offset-4">
                 politíticas de privacidade
               </a>
             </p>
