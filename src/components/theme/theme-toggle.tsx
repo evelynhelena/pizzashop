@@ -23,14 +23,23 @@ export function ThemeToggle() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme('light')}>
-          Light
+        <DropdownMenuItem
+          onClick={() => setTheme('light')}
+          className="cursor-pointer"
+        >
+          Claro
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme('dark')}>
-          Dark
+        <DropdownMenuItem
+          onClick={() => setTheme('dark')}
+          className="cursor-pointer"
+        >
+          Escuro
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme('system')}>
-          System
+        <DropdownMenuItem
+          onClick={() => setTheme('system')}
+          className="cursor-pointer"
+        >
+          Padrão
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
