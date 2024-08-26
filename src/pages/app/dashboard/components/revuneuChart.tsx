@@ -26,6 +26,14 @@ export function RevuneuChart() {
     { date: '15/12', revenue: 900 },
     { date: '16/12', revenue: 1500 },
   ]
+
+  const CustomXAxis = ({ dataKey = 'defaultKey', ...props }) => {
+    return <XAxis dataKey={dataKey} {...props} />
+  }
+  const CustomYAxis = ({ dataKey = 'defaultKey', ...props }) => {
+    return <YAxis dataKey={dataKey} {...props} />
+  }
+
   return (
     <Card className="col-span-6">
       <CardHeader className="flex-row items-center justify-between pb-8">
@@ -39,8 +47,13 @@ export function RevuneuChart() {
       <CardContent>
         <ResponsiveContainer width="100%" height={240}>
           <LineChart data={data} style={{ fontSize: 12 }}>
-            <XAxis dataKey="date" tickLine={false} axisLine={false} dy={16} />
-            <YAxis
+            <CustomXAxis
+              dataKey="date"
+              tickLine={false}
+              axisLine={false}
+              dy={16}
+            />
+            <CustomYAxis
               stroke="#888"
               axisLine={false}
               tickLine={false}
