@@ -7,11 +7,11 @@ export const api = axios.create({
   withCredentials: true,
 })
 
-if (env.VITE_ENABLE_API_DELAY) {
-  // intercepita a requsição e caso a variavel deplay seja true, ele roda mais lento
-  // config é a propria requisição, sendo possivel alteral-la caso necessario
-  api.interceptors.request.use(async (config) => {
-    await new Promise((resolve) => setTimeout(resolve, 2000))
-    return config
-  })
-}
+// if (env.VITE_ENABLE_API_DELAY) {
+//   // intercepita a requsição e caso a variavel deplay seja true, ele roda mais lento
+//   // config é a propria requisição, sendo possivel alteral-la caso necessario
+//   api.interceptors.request.use(async (config) => {
+//     await new Promise((resolve) => setTimeout(resolve, 2000))
+//     return config
+//   })
+// }
