@@ -1,6 +1,6 @@
 import { api } from '@/lib/axios'
 
-interface GetManagedRestaurantresponse {
+export interface GetManagedRestaurantresponse {
   id: string
   name: string
   createdAt: Date | null
